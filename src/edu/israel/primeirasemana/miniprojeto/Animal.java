@@ -1,7 +1,5 @@
 package edu.israel.primeirasemana.miniprojeto;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Animal {
@@ -12,7 +10,7 @@ public class Animal {
 
 
   //Constructor
-  public Animal(String name, String species, int age, int id){
+  public Animal(String name, String species, int age, int id) {
     this.name = name;
     this.species = species;
     this.age = age;
@@ -20,37 +18,39 @@ public class Animal {
   }
 
   //Getters
-  public String getName(){
+  public String getName() {
     return this.name;
   }
 
-  public String getSpecies(){
+  public String getSpecies() {
     return this.species;
   }
 
-  public int getAge(){
+  public int getAge() {
     return this.age;
   }
 
-  public int getId(){
+  public int getId() {
     return this.id;
   }
 
   //Setters
-  public void setName(String name) { this.name = name; }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-  public void setSpecies(String species){
+  public void setSpecies(String species) {
     this.species = species;
   }
 
-  public void setAge(int age){
+  public void setAge(int age) {
     this.age = age;
   }
 
-  public void setId(int id){
+  public void setId(int id) {
     this.id = id;
   }
-
+}
 
 class AnimalRegistry{
   private void registerAnimal() {
@@ -71,7 +71,6 @@ class AnimalRegistry{
     } while (age <= 0);
 
 
-
     System.out.println("Animal cadastrado com sucesso!");
 
   }
@@ -79,28 +78,3 @@ class AnimalRegistry{
 }
 
 
-
-public static void main(String[] args) {
-  final String FILE_PATH = "animals-info.json";
-  List<Animal> animals = new ArrayList<Animal>();
-  //Ainda a ser implementado
-
-
-
-
-  Scanner reader = new Scanner(System.in);
-
-  while (true){
-    System.out.print("[1] Cadastrar um animal\n[2] Listar animais\n[3] Sair\n");
-    int option = reader.nextInt();
-
-    switch (option) {
-      case 1: {
-
-      }
-      //case 1 -> registerAnimal();
-      //case 2 -> listAnimals();}
-    }
-  }
-}
-}
