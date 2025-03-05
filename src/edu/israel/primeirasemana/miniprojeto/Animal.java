@@ -1,5 +1,14 @@
 package edu.israel.primeirasemana.miniprojeto;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Animal {
@@ -53,13 +62,31 @@ public class Animal {
 }
 
 class AnimalRegistry{
-  private void registerAnimal() {
+
+  public List<Animal> loadFromJsonDB(String FILE_PATH){
+    List<Animal> animals = new ArrayList<>();
+    Gson gson = new Gson();
+
+    try (FileReader reader = new FileReader(FILE_PATH)){
+      animals = gson.fromJson(reader, new TypeToken<List<Animal>>(){}.getType());
+    } catch (IOException e){
+      e.printStackTrace();
+    }
+    return animals;
+  }
+
+  public void registerAnimal() {
+    String FILE_PATH = "src/edu/israel/primeirasemana/miniprojeto/animals-info.json";
+    List<Animal> animals = loadFromJsonDB(FILE_PATH);
+    Gson gson = new GsonBuilder().setPrettyPrinting().create();
     Scanner reader = new Scanner(System.in);
+
     System.out.print("Digite o nome do animal: ");
     String name = reader.nextLine();
     System.out.print("Digite a espécie do animal: ");
     String species = reader.nextLine();
     System.out.print("Digite a idade do animal: ");
+
     int age;
     do {
       System.out.println("Digite a idade do animal (número positivo): ");
@@ -69,7 +96,15 @@ class AnimalRegistry{
       }
       age = reader.nextInt();
     } while (age <= 0);
+    int id = 3;
 
+
+    animals.add(new Animal(name, species, age, id));
+    try (FileWriter writer = new FileWriter(FILE_PATH)){
+      gson.toJson(animals, writer);
+    } catch (IOException e){
+      e.printStackTrace();
+    }
 
     System.out.println("Animal cadastrado com sucesso!");
 

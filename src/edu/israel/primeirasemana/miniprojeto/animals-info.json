@@ -1,3 +1,26 @@
 [
-
+  {
+    "name": "Rex",
+    "species": "Dog",
+    "age": 5,
+    "id": 1
+  },
+  {
+    "name": "Bella",
+    "species": "Cat",
+    "age": 3,
+    "id": 2
+  },
+  {
+    "name": "teste",
+    "species": "teste1",
+    "age": 3,
+    "id": 3
+  },
+  {
+    "name": "teste4",
+    "species": "teste3",
+    "age": 4,
+    "id": 3
+  }
 ]
