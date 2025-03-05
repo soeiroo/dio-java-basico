@@ -7,9 +7,6 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
 
-    //Ainda a ser implementado
-
-
     Scanner reader = new Scanner(System.in);
 
     while (true) {
