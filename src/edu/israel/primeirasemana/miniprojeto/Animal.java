@@ -89,15 +89,17 @@ class AnimalRegistry{
 
     int age;
     do {
-      System.out.println("Digite a idade do animal (número positivo): ");
       while (!reader.hasNextInt()) {
         System.out.print("Digite um número válido para a idade: ");
         reader.next();
       }
       age = reader.nextInt();
     } while (age <= 0);
-    int id = 3;
 
+    int id;
+    Animal animal = animals.getLast();
+    id = animal.getId() + 1;
+    System.out.println(animal);
 
     animals.add(new Animal(name, species, age, id));
     try (FileWriter writer = new FileWriter(FILE_PATH)){
@@ -110,6 +112,15 @@ class AnimalRegistry{
 
   }
 
-}
+  public void listAnimals(){
+  String FILE_PATH = "src/edu/israel/primeirasemana/miniprojeto/animals-info.json";
+  List<Animal> animals = loadFromJsonDB(FILE_PATH);
 
+  for (Animal animal : animals) {
+    System.out.print("ID: " + animal.getId() + " | Nome: " + animal.getName() + "\n");
+    System.out.println("----------------------");
+  }
+  }
+
+}
 

@@ -1,1 +1,32 @@
-[{"name":"Rex","species":"Dog","age":5,"id":1},{"name":"Bella","species":"Cat","age":3,"id":2},{"name":"teste","species":"teste1","age":3,"id":3}]
+[
+  {
+    "name": "Rex",
+    "species": "Dog",
+    "age": 5,
+    "id": 1
+  },
+  {
+    "name": "Bella",
+    "species": "Cat",
+    "age": 3,
+    "id": 2
+  },
+  {
+    "name": "teste",
+    "species": "teste1",
+    "age": 3,
+    "id": 3
+  },
+  {
+    "name": "DinoLuna",
+    "species": "T-Rex",
+    "age": 17,
+    "id": 4
+  },
+  {
+    "name": "Summer",
+    "species": "Gato",
+    "age": 4,
+    "id": 5
+  }
+]

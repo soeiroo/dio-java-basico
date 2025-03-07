@@ -4,7 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class Main {
+
+  public static int screenWaiting() {
+    Scanner reader = new Scanner(System.in);
+    String response = "";
+    while ( !response.equalsIgnoreCase("Y")) {
+      System.out.println("Deseja voltar ao menu principal? [Y/N]: ");
+      response = reader.next();
+    }
+    return 0;
+  }
+
+
+
   public static void main(String[] args) {
 
     Scanner reader = new Scanner(System.in);
@@ -15,8 +29,16 @@ public class Main {
       AnimalRegistry registry = new AnimalRegistry();
 
       switch (option) {
-        case 1 -> registry.registerAnimal();
-        //case 2 -> listAnimals();
+        case 1: {
+          registry.registerAnimal();
+          screenWaiting();
+          break;
+        }
+        case 2: {
+          registry.listAnimals();
+          screenWaiting();
+          break;
+        }
         //case 3 -> teste();
       }
     }

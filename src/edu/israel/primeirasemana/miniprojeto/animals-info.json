@@ -18,9 +18,15 @@
     "id": 3
   },
   {
-    "name": "teste4",
-    "species": "teste3",
+    "name": "DinoLuna",
+    "species": "T-Rex",
+    "age": 17,
+    "id": 4
+  },
+  {
+    "name": "Summer",
+    "species": "Gato",
     "age": 4,
-    "id": 3
+    "id": 5
   }
 ]
