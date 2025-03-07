@@ -4,10 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * <h1>Classe principal do programa</h1>
+ * <p>Esse programa tem como funções o incremento e listar de animais</p>
+ *
+ * @author Israel Soeiro
+ * @version 1.0.0
+ * @since 05/03/2025
+ */
 
 public class Main {
 
   public static int screenWaiting() {
+
     Scanner reader = new Scanner(System.in);
     String response = "";
     while ( !response.equalsIgnoreCase("Y")) {
