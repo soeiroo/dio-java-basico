@@ -1,2 +1,2 @@
 # dio-java-basico
-# Fazendo um CRUD em JAVA usando Animais como base | Aprendendo
+# Aprendendo JAVA e suas tecnologias no curso da DIO + Bradesco
