@@ -1,0 +1,35 @@
+@startuml
+enum EstadosBrasileiro {
+SAO_PAULO("SP", "São Paulo")
+RIO_DE_JANEIRO("RJ", "Rio de Janeiro")
+MINAS_GERAIS("MG", "Minas Gerais")
+BAHIA("BA", "Bahia")
+RIO_GRANDE_DO_SUL("RS", "Rio Grande do Sul")
+CEARA("CE", "Ceará")
+// Adicione os outros estados aqui...
+}
+
+class "EstadosBrasileiro (Campos e Métodos)" as ClasseEstados {
+- final String sigla
+- final String nome
++ String getNome()
++ String getSigla()
++ String getNomeMaiusculo()
+- EstadosBrasileiro(String sigla, String nome)
+}
+
+class SistemaIbge {
++ void main(String[] args)
+}
+
+SistemaIbge --> EstadosBrasileiro : usa
+EstadosBrasileiro --> ClasseEstados : contém
+ClasseEstados --> EstadosBrasileiro : constrói
+
+note right of EstadosBrasileiro
+Cada estado possui:
+- sigla (ex: SP, RJ)
+- nome (ex: São Paulo, Rio de Janeiro)
+end note
+
+@enduml
