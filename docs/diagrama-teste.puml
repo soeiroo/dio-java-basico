@@ -1,4 +1,6 @@
 @startuml
+
+'src/edu/israel/segundasemana/poo/aprendendo_enums (FILE_PATH) do conteúdo desse diagrama'
 enum EstadosBrasileiro {
 SAO_PAULO("SP", "São Paulo")
 RIO_DE_JANEIRO("RJ", "Rio de Janeiro")
@@ -6,7 +8,7 @@ MINAS_GERAIS("MG", "Minas Gerais")
 BAHIA("BA", "Bahia")
 RIO_GRANDE_DO_SUL("RS", "Rio Grande do Sul")
 CEARA("CE", "Ceará")
-// Adicione os outros estados aqui...
+// Estados totais: 27
 }
 
 class "EstadosBrasileiro (Campos e Métodos)" as ClasseEstados {
@@ -22,7 +24,8 @@ class SistemaIbge {
 + void main(String[] args)
 }
 
-SistemaIbge --> EstadosBrasileiro : usa
+
+SistemaIbge "1 " --> "1..27 " EstadosBrasileiro : " utiliza"
 EstadosBrasileiro --> ClasseEstados : contém
 ClasseEstados --> EstadosBrasileiro : constrói
 
