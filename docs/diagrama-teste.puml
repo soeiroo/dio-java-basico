@@ -1,4 +1,5 @@
 @startuml
+'src/edu/israel/segundasemana/poo/aprendendo_enums (FILE_PATH) do conteúdo desse diagrama'
 enum EstadosBrasileiro {
 SAO_PAULO("SP", "São Paulo")
 RIO_DE_JANEIRO("RJ", "Rio de Janeiro")
