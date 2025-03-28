@@ -31,8 +31,8 @@ direction TB
 	    +atualizarPagina()
     }
 
-    ReprodutorMusical --> iPhone
-    AparelhoTelefonico --> iPhone
-    NavegadorInternet --> iPhone
+    ReprodutorMusical -- iPhone
+    AparelhoTelefonico -- iPhone
+    NavegadorInternet -- iPhone
 
 ```
